@@ -1,0 +1,55 @@
+import java.io.*;
+import java.util.*;
+ class SetterGetter{
+	 int rollnumber;
+	 String name;
+	 String [] courses;
+	 int noofcourses;
+	 public int getRollnumber() {
+		return rollnumber;
+	}
+     public void setRollnumber(int rollnumber) {
+		this.rollnumber = rollnumber;
+	}
+    public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String[] getCourses() {
+		return courses;
+	}
+
+	public void setCourses(String[] courses) {
+		this.courses = courses;
+	}
+ 
+	public static void main(String args[])
+	{
+	SetterGetter s=new SetterGetter();
+	Scanner sc=new Scanner(System.in);
+    System.out.println("enter your roll no");
+    int rollnumber=sc.nextInt();
+    System.out.println("enter your name");
+    String name=sc.next();
+    System.out.println("how many courses you want to apply for");
+    		int noofcourses=sc.nextInt();
+    		String[] courses=new String[noofcourses];
+    		for(int i=0;i<courses.length;i++)
+    		{
+    			courses[i]=sc.next();
+    			
+    		}
+    		s.setRollnumber(rollnumber);
+    		s.setName(name);
+    		s.setCourses(courses);
+    		System.out.println(s.getRollnumber());
+    		System.out.println(s.getName());
+    		for( int j=0;j<s.getCourses().length;j++){
+    		System.out.println(s.getCourses()[j]);
+    		}
+ }
+ }
